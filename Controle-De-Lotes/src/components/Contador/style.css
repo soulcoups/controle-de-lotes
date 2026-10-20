@@ -1,0 +1,104 @@
+/* 1. CAIXA PRINCIPAL: Centraliza o painel na tela e dá o formato do cartão */
+.contador-container {
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  max-width: 380px;
+  margin: 40px auto;
+  font-family: sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 2. ESTADO NORMAL (0 a 39 caixas): Visual azul neutro */
+.status-normal {
+  background-color: #e0f2fe;
+  border: 3px solid #0284c7;
+  color: #0369a1;
+}
+
+/* 3. ESTADO ALERTA (40 a 49 caixas): Visual amarelo/laranja de atenção */
+.status-alerta {
+  background-color: #fef3c7;
+  border: 3px solid #d97706;
+  color: #92400e;
+}
+
+/* 4. ESTADO LOTE FECHADO (50 caixas): Visual vermelho de limite atingido */
+.status-fechado {
+  background-color: #fee2e2;
+  border: 3px solid #dc2626;
+  color: #991b1b;
+}
+
+/* 5. ETIQUETA DE STATUS: Pílula centralizada com fundo semi-transparente */
+.badge-status {
+  display: inline-block;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* 6. CAMPO DE INCREMENTO: Ajusta o tamanho e alinhamento do input de número */
+.campo-passo {
+  margin: 16px 0;
+}
+
+.campo-passo input {
+  width: 60px;
+  padding: 6px;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-left: 8px;
+}
+
+/* 7. BOTÕES DE + E -: Formatação dos botões de ação e estilo para quando ficarem desabilitados */
+.botoes button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.botoes button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* 8. BOTÃO FINALIZAR LOTE: Estilização do botão escuro de zerar */
+.acoes-lote {
+  margin-top: 18px;
+}
+
+.btn-zerar {
+  padding: 8px 16px;
+  background-color: #475569;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-zerar:hover {
+  background-color: #334155;
+}
+
+/* 9. RODAPÉ DE HISTÓRICO: Texto do último lote registrado com linha pontilhada no topo */
+.ultimo-lote {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  color: #1e293b;
+  border-top: 1px dashed rgba(0, 0, 0, 0.2);
+  padding-top: 12px;
+}
